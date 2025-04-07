@@ -12,6 +12,12 @@ This project creates a web server that acts as a proxy between client applicatio
 - Requests
 - A running Ollama instance with models installed
 
+## Installing Ollama and Running the Deepseek Model
+Download and install Ollama from https://ollama.ai/download. Then, run the following command to install the Deepseek model:
+```
+ollama run deepseek-r1:1.5b
+```
+
 
 ## Installation
 Clone this repository:
