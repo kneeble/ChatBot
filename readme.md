@@ -27,8 +27,10 @@ pip install -r requirements.txt
 ```
 Make sure Ollama is running locally:
 
-
+```
 ollama serve
+```
+
 Start the proxy server:
 
 ```
