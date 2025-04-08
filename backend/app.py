@@ -33,8 +33,7 @@ def gen_stream() -> Iterator[str]:
                 json_response = json.loads(line)
                 if 'response' in json_response:
                     yield json_response['response']
-                if json_response.get('done', False):
-                    break
+    
 
     return Response(stream_with_context(stream_gen()), content_type="text/plain")
 

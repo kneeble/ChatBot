@@ -1,0 +1,17 @@
+version: '3'
+services:
+  ollama:
+    image: ollama/ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+  app:
+    image: mcr.microsoft.com/devcontainers/universal:2-linux
+    volumes:
+      - ..:/workspace
+    ports:
+      - "3000:3000"
+      - "5000:5000"
+volumes:
+  ollama_data:

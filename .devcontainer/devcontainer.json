@@ -1,0 +1,16 @@
+{
+    "name": "Ollama ChatBot",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace",
+    "forwardPorts": [3000, 5000, 11434],
+    "postCreateCommand": "docker compose up -d ollama && sleep 10 && docker exec ollama ollama pull deepseek-r1:1.5b && pip install -r backend/requirements.txt && cd frontend && npm install",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-python.python",
+          "ms-azuretools.vscode-docker"
+        ]
+      }
+    }
+  }
