@@ -30,10 +30,13 @@ def gen_stream() -> Iterator[str]:
         for line in response.iter_lines():
             if not line:
                 continue
-            json_response = json.loads(line)
-            yield json_response.get('response', '')
-            if json_response.get('done'):
-                break
+            try:
+                json_response = json.loads(line)
+                yield json_response.get('response', '')
+                if json_response.get('done'):
+                    break
+            except Exception as e:
+                yield f"Error: {str(e)}"
     
 
     return Response(stream_with_context(stream_gen()), content_type="text/plain")
