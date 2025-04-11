@@ -27,12 +27,13 @@ def gen_stream() -> Iterator[str]:
                 stream=True
             )
         
-        full_response = ""
         for line in response.iter_lines():
-            if line:
-                json_response = json.loads(line)
-                if 'response' in json_response:
-                    yield json_response['response']
+            if not line:
+                continue
+            json_response = json.loads(line)
+            yield json_response.get('response', '')
+            if json_response.get('done'):
+                break
     
 
     return Response(stream_with_context(stream_gen()), content_type="text/plain")
