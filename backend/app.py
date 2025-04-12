@@ -1,11 +1,12 @@
 from typing import Iterator
 from flask import Flask, request, Response, stream_with_context, jsonify
+from flask import Flask, request, Response, stream_with_context
 from flask_cors import CORS
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 import torch
 
-#  Load base model and adapter 
+
 base_model = "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
 adapter_path = "lora-output/adapter"
 
@@ -19,7 +20,7 @@ model.eval()
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
 model.to(device)
 
-#  Flask setup 
+# Flask setup 
 app = Flask(__name__)
 CORS(app)
 
@@ -65,4 +66,5 @@ def generate() -> Response:
     return Response(stream_with_context(stream_gen()), content_type="text/plain")
 
 if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080)
     app.run(host="0.0.0.0", port=8080)
