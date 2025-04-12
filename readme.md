@@ -12,6 +12,22 @@ Welcome to NextGen Advanced AI.
 
 An open source artificial intelligence built by Loyola University students, where philosophy meets machine learning. We're creating ethical AI that thinks deeper, questions smarter, and elevates human wisdom.
 
+## Edits to initial DeepSeek Model - Kaleb Neeble and Oscar Sanchez Huezca
+
+The NextGen Advanced AI system underwent substantial architectural improvements, evolving from its original implementation as a local language model to a more advanced scalable solution. The basis of DeepSeek LLM Version 1.5bB API formed the background for these upgrades, with Axios facilitating efficient and secure API communication. Alongside this backend enhancement, the frontend was completely modernized using React and Vite, introducing real time chat streaming. Docker was integrated to standardize development and deployment environments, which included better management.
+
+Building on this infrastructure, we developed a custom trained model specifically tailored for philosophical reasoning. Using the DeepSeek architecture as a base, the model was tuned on a curated dataset which included advanced philosophical reasoning questions.
+
+The resulting system demonstrates improved reasoning depth, responsiveness, and scalability while retaining its foundational commitment to ethical AI development. Future work will focus on expanding the model’s knowledge base, improving capabilities, and exploring reinforcement learning from human feedback to further strengthen its philosophical engagement.
+
+## Testing Procedure - Oscar Sanchez Huezca
+ 
+In terms of the testing procedure, it is incredibly simple but relevant:
+ 
+All that was used was a txt file of questions, ones that were on and off topic in relation to philosophy, and the responses from the model were recorded. More than anything it was to check if the model was being fine-tuned correctly, and that it was answering the questions in a clear, concise, and informational manner, unlike the previous Q&A's of the original model. The answers are then personally reviewed by an individual and checked for all of the aforementioned criteria.
+ 
+If this were to be applied more broadly, or tested in an even more thorough way or even applied to other areas of knowledge, there would need to be a change to the training data that is given as well as a change to the testing method, considering the volume of the testing was not as thorough as could possibly be.
+
 ## Key Components
 
 ### 1. `train_lora.py` — Fine-Tuning with LoRA
