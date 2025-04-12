@@ -6,6 +6,12 @@ This project demonstrates how to fine-tune the `deepseek-ai/DeepSeek-R1-Distill-
 
 ---
 
+## Mission Statement
+
+Welcome to NextGen Advanced AI.
+
+An open source artificial intelligence built by Loyola University students, where philosophy meets machine learning. We're creating ethical AI that thinks deeper, questions smarter, and elevates human wisdom.
+
 ## Key Components
 
 ### 1. `train_lora.py` — Fine-Tuning with LoRA
