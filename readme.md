@@ -12,6 +12,13 @@ Welcome to NextGen Advanced AI.
 
 An open source artificial intelligence built by Loyola University students, where philosophy meets machine learning. We're creating ethical AI that thinks deeper, questions smarter, and elevates human wisdom.
 
+## Initial Backend Development for AI Chatbot with Real-Time Streaming - Fiona Wang
+The first backend version of the AI chatbot was built using Flask, integrating with the local Ollama API to enable real-time response streaming from a language model. A /generate route was set up to receive user input, send it to the model, and stream the generated output back to the client. This setup served as the groundwork for future improvements by the team.
+
+The diagram depicts the data flow within the initial backend architecture of the AI chatbot. When a client issues a POST /generate request, the Flask server transmits the prompt to the Ollama API via HTTP streaming. The Ollama API then responds with a continuous stream of generated text, which is subsequently relayed by Flask back to the client in real-time segments. This configuration facilitates seamless and low-latency communication between the client and the language model.
+<img width="1402" alt="image" src="https://github.com/user-attachments/assets/d3d5fe31-e604-4845-9f08-071b2766043e" />
+
+
 ## Edits to initial DeepSeek Model - Kaleb Neeble and Oscar Sanchez Huezca
 
 The NextGen Advanced AI system underwent substantial architectural improvements, evolving from its original implementation as a local language model to a more advanced scalable solution. The basis of DeepSeek LLM Version 1.5bB API formed the background for these upgrades, with Axios facilitating efficient and secure API communication. Alongside this backend enhancement, the frontend was completely modernized using React and Vite, introducing real time chat streaming. Docker was integrated to standardize development and deployment environments, which included better management.
