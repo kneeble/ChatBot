@@ -198,8 +198,26 @@ This was to verify that the training of the model had been done correctly and wa
 
 ---
 
+###  Code of Conduct -  Fiona Wang
 
+####  Core Principles  
+We warmly welcome all participants to our project. Regardless of your background, we kindly ask that you maintain a respectful, friendly, and inclusive attitude throughout your participation.
 
+####  Expected Conduct  
+-  Engage in warm and supportive communication; always be ready to lend a helping hand to others  
+-  Provide thoughtful and constructive feedback that helps others grow  
+-  Participate in meaningful discussions on AI ethics, including important topics like **bias mitigation** and **security considerations**
+
+####  Prohibited Conduct  
+-  Avoid personal attacks or any form of discriminatory language  
+-  Refrain from creating or sharing harmful content, including **violent** or **false information**  
+-  Do not misuse project resources, such as developing bots for **harassment purposes**
+
+####  Reporting Protocol  
+If you encounter any violations, we sincerely encourage you to promptly notify the **Project Maintenance Team**  
+Your vigilance helps us maintain a safe and welcoming environment for everyone. Thank you for your cooperation and understanding!
+
+---
 ## Licenses
 
 This project builds upon open-source tools released under various licenses:
